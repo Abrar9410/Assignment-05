@@ -36,26 +36,113 @@
 <body class="font-Lexend p-0 m-0 box-border">
     <header>
         <nav class="bg-navBg">
-            <div class="flex justify-between items-center w-11/12 mx-auto pt-6 pb-14">
-                <a href="./index.html">
-                    <button class="bg-button text-primary text-xl font-bold py-3 px-8 rounded-lg shadow-md">Home</button></a>
-                <div class="flex justify-center items-center gap-4">
+            <div class="flex flex-col gap-6 sm:flex-row justify-between items-center w-11/12 mx-auto pt-6 pb-14">
+                <a class="order-2 sm:order-1" href="./index.html">
+                    <button
+                        class="bg-button text-primary text-xl font-bold py-3 px-8 rounded-lg shadow-md">Home</button></a>
+                <div class="order-1 sm:order-2 flex justify-center items-center gap-4">
                     <img src="./assets/logo.png" alt="logo">
-                    <p class="text-primary text-xl lg:text-2xl font-bold">Donate Bangladesh</p>
+                    <p class="text-primary text-xl min-[335px]:text-2xl font-bold">Donate Bangladesh</p>
                 </div>
-                <div class="flex justify-center items-center gap-3">
+                <div class="order-3 flex justify-center items-center gap-3">
                     <img src="./assets/coin.png" alt="coin">
                     <p class="text-secondary text-xl font-semibold"><span id="remaining-balance">5500</span> BDT</p>
                 </div>
             </div>
         </nav>
     </header>
-    
-    <main>
-        
+
+    <main class="w-11/12 mx-auto">
+        <h1 class="flex items-end gap-4 my-8 text-primary text-xl min-[300px]:text-2xl sm:text-4xl font-bold">Important FAQ
+            <img class="w-8 h-8 min-[300px]:w-10 min-[300px]:h-10 sm:w-auto sm:h-auto" src="./assets/question-mark.jpg" alt="">
+        </h1>
+        <div class="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-primary text-xl font-medium">What is the Document Object Model (DOM)?</div>
+            <div class="collapse-content">
+                <p class="text-secondary">
+                    The Document Object Model (DOM) is a programming interface for web documents.
+                    It represents the page so that programs can change the document structure, style,
+                    and content. The DOM represents the document as nodes and objects;
+                    that way, programming languages can interact with the page.
+                </p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-primary text-xl font-medium">How do you select an element from the DOM?</div>
+            <div class="collapse-content">
+                <p class="text-secondary">
+                    There are five methods for selecting elements in a document.<br>
+                    - document.getElementById(id)<br> 
+                    - document.getElementsByClassName(className)<br>
+                    - document.getElementsByTagName(tagName)<br>
+                    - document.querySelector(cssSelector)<br>
+                    - document.querySelectorAll(cssSelector)<br>
+                    Of these methods, the getElementById and querySelector methods return a single
+                    object element when employed.<br>On the other hand, the getElementsByClassName and
+                    getElementsByTagName methods return an array-like HTMLCollection object.
+                    The array-like collection includes all elements as they are added under the tag name
+                    or class name.<br>Finally, the querySelectorAll() method returns an array-like NodeList,
+                    which is different from the HTMLCollection object above in that it does not
+                    automatically update if new elements are added to the page.
+                </p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-primary text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+            <div class="collapse-content">
+                <p class="text-secondary">
+                    Event delegation is a design pattern in JavaScript used to efficiently manage and
+                    handle events on multiple child elements by attaching a single event listener to
+                    a common parent element. This pattern takes advantage of event propagation,
+                    specifically the "bubbling" phase, where an event travels up the DOM hierarchy from
+                    the target element to the root.<br><br>Why Use Event Delegation:<br>
+                    Efficiency: Instead of attaching a click handler to each item, event delegation allows
+                    us to attach a single listener to the parent container. This results in less code and
+                    better performance, especially for large sets of elements.<br>
+                    Dynamism: Event delegation is particularly useful when dealing with dynamic content.
+                    As new elements are added or removed, the event listener remains attached to
+                    the parent, reducing the need for constant reattachment.
+                </p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-primary text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+            <div class="collapse-content">
+                <p class="text-secondary">
+                    Manipulating an element's attributes and styles using the DOM (Document Object Model)
+                    can be done easily with JavaScript. Here are some common methods:<br><br>
+                    Manipulating Attributes:<br>
+                    1. setAttribute(): We can set or change attributes using the setAttribute method or
+                    directly with the property if it's a common attribute. It accepts two parameters:
+                    the attribute name and the attribute value.<br>
+                    2. getAttribute(): We can call the getAttribute() method on our element and pass it
+                    the name of our attribute to retrieve its value. The return value of this method is
+                    a string that represents the value of the attribute. We get back 'null' when the
+                    attribute whose value we are retrieving does not actually exist.<br>
+                    3. removeAttribute(): We can use this method to remove an attribute entirely.<br><br>
+                    Manipulating Styles:<br>
+                    1. using the style property: We can change styles by accessing the style property
+                    of the element. For example:<br>
+                    element.style.backgroundColor = 'blue';<br>
+                    element.style.width = '100px';<br>
+                    element.style.display = 'none'; // Hide the element<br>
+                    2. Add, Remove, Replace, or Toggle Element Classes: We can also manipulate classes by
+                    accessing the classList property. Adding, removing, replacing, and toggling classes
+                    of an element is a very common task in web development. An element might need to be
+                    in an active or inactive state, which you can show by using different classes.<br>
+                    Although we can use the getAttribute() and setAttribute() methods to do all these
+                    operations on an element's classes, it is much more convenient to just use the
+                    read-only classList property along with its add(), remove(), replace(), and
+                    toggle() helper methods.
+                </p>
+            </div>
+        </div>
     </main>
 
-    <footer></footer>
 </body>
 
 </html>
