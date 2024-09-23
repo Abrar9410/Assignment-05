@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'rgba(17, 17, 17, 1)',
+                        secondary: 'rgba(17, 17, 17, 0.7)',
+                        placeholder: 'rgba(17, 17, 17, 0.4)',
+                        border1: 'rgba(17, 17, 17, 0.3)',
+                        border2: 'rgba(17, 17, 17, 0.1)',
+                        navBg: 'rgba(249, 247, 243, 1)',
+                        amountBg: 'rgba(17, 17, 17, 0.05)',
+                        button: 'rgba(180, 244, 97, 1)'
+                    },
+                    fontFamily: {
+                        Lexend: 'Lexend'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-Lexend p-0 m-0 box-border">
+    <header>
+        <nav class="bg-navBg">
+            <div class="flex justify-between items-center w-11/12 mx-auto pt-6 pb-14">
+                <a href="./index.html">
+                    <button class="bg-button text-primary text-xl font-bold py-3 px-8 rounded-lg shadow-md">Home</button></a>
+                <div class="flex justify-center items-center gap-4">
+                    <img src="./assets/logo.png" alt="logo">
+                    <p class="text-primary text-xl lg:text-2xl font-bold">Donate Bangladesh</p>
+                </div>
+                <div class="flex justify-center items-center gap-3">
+                    <img src="./assets/coin.png" alt="coin">
+                    <p class="text-secondary text-xl font-semibold"><span id="remaining-balance">5500</span> BDT</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        
+    </main>
+
+    <footer></footer>
+</body>
+
+</html>
