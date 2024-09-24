@@ -17,7 +17,7 @@ const donationAmounts = document.getElementsByClassName('donation-amount');
 for (let i = 0; i < donateButtons.length; i++) {
     donateButtons[i].addEventListener('click', function(){
         const donatedAmount = parseFloat(donatedAmounts[i].innerText);
-        const donationAmount = parseFloat(donationAmounts[i].value);
+        const donationAmount = parseFloat(parseFloat(donationAmounts[i].value).toFixed(2));
         const remainingBalance = parseFloat(balance.innerText);
         if (isNaN(donationAmount) || donationAmount <= 0) {
             alert('Invalid Donation Amount');
@@ -29,19 +29,39 @@ for (let i = 0; i < donateButtons.length; i++) {
         }
         const newDonatedAmount = donatedAmount + donationAmount;
         document.getElementsByClassName('donated-amount')[i].innerText = newDonatedAmount;
-        const newRemainingBalance = remainingBalance - donationAmount;
+        const newRemainingBalance = parseFloat(remainingBalance - donationAmount).toFixed(2);
         balance.innerText = newRemainingBalance;
         document.getElementById('success-modal').classList.add('modal-open');
         updateHistory(i);
+        donationAmounts[i].value = '';
     })
 }
 
 
-document.getElementById('btn-history').addEventListener('click', function(){
-    historyActive();
-})
+function closeModal(){
+    document.getElementById('success-modal').classList.remove('modal-open');
+}
 
 
-document.getElementById('btn-donation').addEventListener('click', function(){
-    donationActive();
-})
+// switching to History
+document.getElementById('btn-history').addEventListener('click', historyActive);
+
+
+// switching to Donation
+document.getElementById('btn-donation').addEventListener('click', donationActive);
+
+
+function historyActive(){
+    activeButton('btn-history');
+    deactiveButton('btn-donation');
+    document.getElementById('sec-donation').classList.add('hidden');
+    document.getElementById('sec-history').classList.remove('hidden');
+}
+
+
+function donationActive(){
+    activeButton('btn-donation');
+    deactiveButton('btn-history');
+    document.getElementById('sec-donation').classList.remove('hidden');
+    document.getElementById('sec-history').classList.add('hidden');
+}
