@@ -33,7 +33,7 @@
     </script>
 </head>
 
-<body class="font-Lexend p-0 m-0 box-border">
+<body class="font-Lexend p-0 m-0 box-border flex flex-col min-h-[100vh]">
     <header class="sticky top-0 z-10 bg-white/95">
         <nav class="bg-navBg">
             <div class="flex flex-col gap-6 sm:flex-row justify-between items-center w-11/12 mx-auto pt-6 pb-14">
@@ -58,7 +58,7 @@
     </header>
 
     <main>
-        <section id="sec-donation">
+        <section id="sec-donation" class="my-8">
             <div class="w-10/12 mx-auto border border-border1 rounded-2xl p-8 mb-8">
                 <div class="card gap-8 lg:card-side">
                     <figure class="p-0 rounded-xl">
@@ -69,7 +69,7 @@
                             <img class="w-6 h-6" src="./assets/coin.png" alt="coin" />
                             <p class="text-secondary font-semibold"><span class="donated-amount">23760</span> BDT</p>
                         </span>
-                        <h2 class="card-title text-primary my-2">Donate for Flood at Noakhali, Bangladesh</h2>
+                        <h2 class="title card-title text-primary my-2">Donate for Flood at Noakhali, Bangladesh</h2>
                         <p class="text-secondary">The recent floods in Noakhali have caused significant damage to homes
                             infrastructure. Your donation will help provide essential supplies and to those affected by
                             this disaster. Every contribution, big or small, makes difference. Please join us in
@@ -96,7 +96,7 @@
                             <img class="w-6 h-6" src="./assets/coin.png" alt="coin" />
                             <p class="text-secondary font-semibold"><span class="donated-amount">7655</span> BDT</p>
                         </span>
-                        <h2 class="card-title text-primary my-2">Donate for Flood Relief in Feni,Bangladesh</h2>
+                        <h2 class="title card-title text-primary my-2">Donate for Flood Relief in Feni,Bangladesh</h2>
                         <p class="text-secondary">The recent floods in Feni have devastated local communities, leading
                             to severe disruption and loss. Your generous donation will help provide immediate aid,
                             including food, clean water, and medical supplies, to those affected by this calamity.
@@ -124,7 +124,7 @@
                             <img class="w-6 h-6" src="./assets/coin.png" alt="coin" />
                             <p class="text-secondary font-semibold"><span class="donated-amount">3500</span> BDT</p>
                         </span>
-                        <h2 class="card-title text-primary my-2">Aid for Injured in the Quota Movement</h2>
+                        <h2 class="title card-title text-primary my-2">Aid for Injured in the Quota Movement</h2>
                         <p class="text-secondary">The recent Quota movement has resulted in numerous injuries and
                             significant hardship for many individuals. Your support is crucial in providing medical
                             assistance, rehabilitation, and necessary supplies to those affected. By contributing, you
@@ -153,7 +153,7 @@
                             <img class="w-6 h-6" src="./assets/coin.png" alt="coin" />
                             <p class="text-secondary font-semibold"><span class="donated-amount">3647</span> BDT</p>
                         </span>
-                        <h2 class="card-title text-primary my-2">Donate to Fight against Cancer</h2>
+                        <h2 class="title card-title text-primary my-2">Donate to Fight against Cancer</h2>
                         <p class="text-secondary">Your gift makes a difference in the lives of cancer
                             patients and in the National Cancer Community efforts to eliminate cancer
                             through prevention and wellness services. Gifts support a range of
@@ -188,10 +188,10 @@
                 </div>
             </dialog>
         </section>
-        <section id="sec-history"></section>
+        <section id="sec-history" class="my-8 hidden"></section>
     </main>
 
-    <footer class="bg-navBg h-28"></footer>
+    <footer class="bg-navBg h-28 mt-auto"></footer>
 
     <script src="./js/donateBD.js"></script>
     <script src="./js/common.js"></script>

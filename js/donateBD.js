@@ -1,3 +1,6 @@
+// selecting campaign title
+const titles = document.getElementsByClassName('title');
+
 // selecting remaining balance by ID
 const balance = document.getElementById('balance');
 
@@ -29,5 +32,16 @@ for (let i = 0; i < donateButtons.length; i++) {
         const newRemainingBalance = remainingBalance - donationAmount;
         balance.innerText = newRemainingBalance;
         document.getElementById('success-modal').classList.add('modal-open');
+        updateHistory(i);
     })
 }
+
+
+document.getElementById('btn-history').addEventListener('click', function(){
+    historyActive();
+})
+
+
+document.getElementById('btn-donation').addEventListener('click', function(){
+    donationActive();
+})
